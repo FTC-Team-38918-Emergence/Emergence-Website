@@ -1,0 +1,75 @@
+<!-- 1. Wrap all your CSS code inside a <style> tag at the very top -->
+<style>
+  /* Page View Controller Styles */ 
+  .page-view { display: none; } 
+  .page-view.active { display: block; }
+
+  /* Members Grid */ 
+  .members-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; } 
+  .member-card { background: white; border: 1px solid #e3e8ed; padding: 20px; text-align: center; } 
+  .member-avatar { width: 90px; height: 90px; border-radius: 50%; background: #d7e0e8; margin: 0 auto 15px; display: grid; place-items: center; font-weight: bold; color: var(--muted); font-size: 24px; overflow: hidden; } 
+  .member-avatar img { width: 100%; height: 100%; object-fit: cover; } 
+  .member-card h3 { font-size: 18px; margin: 0 0 5px; } 
+  .member-card p { font-size: 13px; color: var(--muted); margin: 0; }
+
+  /* Portfolio & Sponsors Content */ 
+  .content-box { background: white; border: 1px solid #e3e8ed; padding: 40px; margin-top: 20px; line-height: 1.8; } 
+  .content-box h3 { font-size: 24px; margin-top: 0; color: var(--navy); } 
+  .sponsor-tier { margin-bottom: 30px; } 
+  .sponsor-tier h4 { color: var(--blue); border-bottom: 2px solid #e5e9ed; padding-bottom: 8px; } 
+  .sponsor-logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px; } 
+  .sponsor-logo-box { background: #f7f9fb; border: 1px dashed #c6d1db; padding: 30px; text-align: center; font-weight: bold; color: var(--muted); }
+
+  @media(max-width:760px){
+    .nav{padding:14px 20px}
+    .navlinks{gap:12px;font-size:11px}
+    .hero{min-height:540px;padding-top:65px;padding-bottom:65px}
+    .hero p{font-size:16px}
+    .stats{padding:0 20px}
+    .stat{padding:22px 12px}
+    .stat strong{font-size:22px}
+    .stat span{font-size:9px;letter-spacing:.08em}
+    .section{padding:65px 20px}
+    .cards{grid-template-columns:1fr}
+    .card{min-height:180px}
+    .card h3{margin-top:18px}
+    .dark-band{grid-template-columns:1fr;gap:28px}
+    .join{align-items:flex-start;flex-direction:column}
+    .footer{align-items:flex-start;flex-direction:column}
+  }
+</style>
+
+<!-- 2. Your HTML code goes directly below the closing </style> tag -->
+<section class="stats" aria-label="Team facts">
+  <div class="stat"><strong>38918</strong><span>Team number</span></div>
+  <div class="stat"><strong>Rookie</strong><span>Team status</span></div>
+  <div class="stat"><strong>FMHS</strong><span>Flower Mound High School</span></div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-head">
+    <div class="kicker">Who we are</div>
+    <h2>New team. Big ambition.</h2>
+    <p>Emergence is where our robotics journey begins. As a rookie team, we’re developing the skills, teamwork, and confidence to take on challenges one prototype at a time.</p>
+  </div>
+  <div class="cards">
+    <article class="card"><div class="card-number">01 / DESIGN</div><h3>Think it through.</h3><p>We sketch ideas, test possibilities, and learn how thoughtful design turns a challenge into a plan.</p></article>
+    <article class="card"><div class="card-number">02 / BUILD</div><h3>Make it real.</h3><p>We get hands-on with mechanisms, tools, and code — learning from every test, tweak, and rebuild.</p></article>
+    <article class="card"><div class="card-number">03 / GROW</div><h3>Rise together.</h3><p>Robotics is a team effort. We share what we learn, support each other, and improve together.</p></article>
+  </div>
+</section>
+
+<section class="section dark-band" id="values">
+  <div class="section-head">
+    <div class="kicker">Our approach</div>
+    <h2>Progress over perfection.</h2>
+    <p>Being rookies means every challenge is a chance to learn. We stay curious, stay persistent, and keep finding better ways to build and work together.</p>
+    <div class="pill-row"><span class="pill">CREATIVITY</span><span class="pill">TEAMWORK</span><span class="pill">ENGINEERING</span><span class="pill">RESILIENCE</span></div>
+  </div>
+  <div class="number-panel" id="team"><small>FLOWER MOUND HIGH SCHOOL</small><strong>38918</strong><span>Emergence · Rookie Robotics</span></div>
+</section>
+
+<section class="join">
+  <div><h2>The journey starts here.</h2><p>Follow Team Emergence as we learn, build, and grow into the next generation of robotics.</p></div>
+  <a class="btn" href="mailto:team38918@example.com?subject=Hello%20Emergence%20Team">SAY HELLO ↗</a>
+</section>
