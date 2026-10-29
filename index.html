@@ -10,17 +10,17 @@
 <body>
 <div class="topline"></div>
 <nav class="nav" aria-label="Main navigation">
-  <a class="brand" href="#home" onclick="showPage('home')">
+  <a class="brand" href="#home" onclick="showPage('home', event)">
     <img src="logo.png" alt="Emergence Logo" class="brand-logo" onerror="this.style.display='none'" />
     <span>EMERGENCE<small>FMHS ROBOTICS · TEAM 38918</small></span>
   </a>
   <div class="navlinks">
-    <a href="#about" onclick="showPage('home')">ABOUT</a>
-    <a href="#values" onclick="showPage('home')">OUR APPROACH</a>
-    <a href="#robot" onclick="showPage('robot')">ROBOT</a>
-    <a href="#members" onclick="showPage('members')">MEET THE TEAM</a>
-    <a href="#portfolio" onclick="showPage('portfolio')">PORTFOLIO</a>
-    <a href="#sponsors" onclick="showPage('sponsors')">SPONSORS</a>
+    <a href="#about" onclick="showPage('home', event)">ABOUT</a>
+    <a href="#values" onclick="showPage('home', event)">OUR APPROACH</a>
+    <a href="#robot" onclick="showPage('robot', event)">ROBOT</a>
+    <a href="#members" onclick="showPage('members', event)">MEET THE TEAM</a>
+    <a href="#portfolio" onclick="showPage('portfolio', event)">PORTFOLIO</a>
+    <a href="#sponsors" onclick="showPage('sponsors', event)">SPONSORS</a>
   </div>
 </nav>
 
@@ -34,7 +34,7 @@
           <h1>BUILT TO<br><span>EMERGE.</span></h1>
           <p>We’re Emergence — a rookie robotics team learning by building, solving problems, and turning big ideas into real machines.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#robot" onclick="showPage('robot')">VIEW ROBOT <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-primary" href="#robot" onclick="showPage('robot', event)">VIEW ROBOT <span aria-hidden="true">↗</span></a>
             <a class="btn btn-outline" href="#team">TEAM 38918</a>
           </div>
           <div class="hero-tag"><i></i> CURIOUS MINDS. HANDS-ON ENGINEERING. ONE TEAM.</div>
@@ -67,7 +67,7 @@
           <div class="kicker" style="color: var(--cyan);">OUR HARDWARE</div>
           <h3 style="font-size:26px; margin:8px 0 12px; letter-spacing:-.03em;">2026-27 Robot Build</h3>
           <p style="color:#c6d1db; margin:0 0 20px; line-height:1.6; font-size:14px;">We are actively designing and assembling our robot for the BIOBUZZ season! Full CAD renders, mechanism breakdowns, and testing clips are currently in development.</p>
-          <a class="btn btn-primary" href="#robot" onclick="showPage('robot')">ROBOT SHOWCASE (COMING SOON) ↗</a>
+          <a class="btn btn-primary" href="#robot" onclick="showPage('robot', event)">ROBOT SHOWCASE (COMING SOON) ↗</a>
         </div>
         <div style="text-align:center; padding: 20px; background: rgba(255,255,255,0.03); border: 1px dashed var(--cyan); border-radius: 8px;">
           <span style="font-size: 11px; font-weight: 900; letter-spacing: .2em; color: var(--orange); display: block; margin-bottom: 6px;">STATUS</span>
@@ -127,7 +127,7 @@
         <div class="kicker">Robot Showcase</div>
         <h2>Team 38918 Robot</h2>
         <p>Explore our mechanical designs, prototyping iterations, and build progress for the BIOBUZZ season.</p>
-        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home')">← Back to Home</a></div>
+        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home', event)">← Back to Home</a></div>
       </div>
       <div class="cards">
         <article class="card" style="border-top: 4px solid var(--orange);">
@@ -156,7 +156,7 @@
         <div class="kicker">Team Roster</div>
         <h2>Meet the Members of Emergence</h2>
         <p>Our dedicated crew of builders, programmers, designers, and strategists driving Team 38918 forward.</p>
-        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home')">← Back to Home</a></div>
+        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home', event)">← Back to Home</a></div>
       </div>
       <div class="member-grid">
         <div class="member-card"><div class="member-tag">TEAM MEMBER</div><h3>Ajay Aggarwal</h3><p>CAD, Human Player, Builder</p></div>
@@ -180,7 +180,7 @@
         <div class="kicker">Documentation</div>
         <h2>Engineering Portfolio</h2>
         <p>Explore our design process, iteration logs, mechanical schematics, and code architecture for the season.</p>
-        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home')">← Back to Home</a></div>
+        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home', event)">← Back to Home</a></div>
       </div>
       <div class="cards">
         <article class="card"><div class="card-number">DOCUMENT 01</div><h3>Engineering Portfolio (Link Soon)</h3><p>Our team's document that summarizes what we have done throughout the year and what our robot does.</p></article>
@@ -195,12 +195,56 @@
         <div class="kicker">Our Supporters</div>
         <h2>Thank You, Sponsors</h2>
         <p>Team Emergence is made possible through the generous support of our school, local businesses, and community partners.</p>
-        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home')">← Back to Home</a></div>
+        <div style="margin-top: 20px;"><a class="btn btn-outline" style="color:var(--navy); border-color:var(--navy);" href="#" onclick="showPage('home', event)">← Back to Home</a></div>
       </div>
       <div class="cards">
-        <!-- FORMATTED DALLAS 3D PRINTS SPONSOR CARD -->
         <article class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div class="card-number">COMMUNITY SPONSOR</div>
             <div style="background: #fafbfc; border: 1px solid #e3e8ed; border-radius: 6px; padding: 16px; margin: 16px 0 20px; text-align: center;">
-              <img src="dallas3DPrintsLogo.png" alt="Dallas 3D Prints Logo" style="max-width: 100%; height: 90px; object-fit: contain; display: block; margin: 0 auto;" onerror="this.style.
+              <img src="dallas3DPrintsLogo.png" alt="Dallas 3D Prints Logo" style="max-width: 100%; height: 90px; object-fit: contain; display: block; margin: 0 auto;" onerror="this.style.display='none'" />
+            </div>
+            <h3>Dallas 3D Prints</h3>
+            <p>Generously supporting Team Emergence with 3D printing resources, rapid prototyping materials, and custom component manufacturing.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-number">TITLE SPONSOR</div>
+          <h3>FMHS Boosters</h3>
+          <p>Proudly backing Flower Mound High School's newest robotics initiative and providing workspace facilities.</p>
+        </article>
+        <article class="card">
+          <div class="card-number">CONTRIBUTOR</div>
+          <h3>Family & Friends</h3>
+          <p>Community donations that fund registration fees, raw materials, and competition travel expenses.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <strong>EMERGENCE <span>·</span> 38918</strong>
+  <span>Flower Mound High School · Rookie Robotics Team</span>
+  <span>LEARN. BUILD. EMERGE.</span>
+</footer>
+
+<script>
+function showPage(pageId, e) {
+  if (e) {
+    e.preventDefault();
+  }
+  document.querySelectorAll('.page-view').forEach(view => {
+    view.classList.remove('active');
+  });
+  const targetPage = document.getElementById('page-' + pageId);
+  if (targetPage) {
+    targetPage.classList.add('active');
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  return false;
+}
+</script>
+</body>
+</html>
